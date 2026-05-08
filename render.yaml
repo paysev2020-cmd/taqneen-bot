@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: taqneen-bot
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: TG_TOKEN
+        sync: false
+      - key: TG_ADMIN
+        sync: false
+      - key: TG_ALLOWED
+        sync: false
+      - key: FIREBASE_SERVICE_ACCOUNT
+        sync: false
+      - key: RENDER_URL
+        sync: false
